@@ -1,0 +1,3 @@
+﻿  Bai001.cpp
+C:\Users\ASUS\OneDrive\Desktop\BaiTapMaTran\Bai001\Bai001.cpp(30,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Bai001.vcxproj -> C:\Users\ASUS\OneDrive\Desktop\BaiTapMaTran\x64\Debug\Bai001.exe
