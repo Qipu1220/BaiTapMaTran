@@ -1,7 +1,0 @@
-﻿  Bai100.cpp
-D:\NMLT\23521672_BT03\Bai100\Bai100.cpp(21,47): error C3861: 'ChinhPhuongLonNhat': identifier not found
-D:\NMLT\23521672_BT03\Bai100\Bai100.cpp(31,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\NMLT\23521672_BT03\Bai100\Bai100.cpp(75,8): error C3861: 'ktChinhPhuong': identifier not found
-D:\NMLT\23521672_BT03\Bai100\Bai100.cpp(75,34): warning C4805: '==': unsafe mix of type 'unknown-type' and type 'bool' in operation
-D:\NMLT\23521672_BT03\Bai100\Bai100.cpp(84,6): error C3861: 'ChinhPhuongDau': identifier not found
-D:\NMLT\23521672_BT03\Bai100\Bai100.cpp(89,11): error C3861: 'ChinhPhuongDau': identifier not found
