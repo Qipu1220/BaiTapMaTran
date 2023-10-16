@@ -65,6 +65,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bai046", "Bai046\Bai046.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bai051", "Bai051\Bai051.vcxproj", "{2E7C6015-1CCE-41EB-AE07-727DA1D68618}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bai056", "Bai056\Bai056.vcxproj", "{71749837-E799-4CF7-8C16-665A699A8672}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bai061", "Bai061\Bai061.vcxproj", "{BD4BA9B8-B120-48B8-8D01-C5DADDEADC16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
