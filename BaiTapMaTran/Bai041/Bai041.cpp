@@ -1,14 +1,14 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-void Nhap(int[][200], int&, int&);
-void Xuat(int[][200], int, int);
+void Nhap(int[][100], int&, int&);
+void Xuat(int[][100], int, int);
 bool KTChinhPhuong(int);
-int TongCot(int[][200], int, int,int);
+int TongCot(int[][100], int, int,int);
 
 int main()
 {
-	int b[200][200];
+	int b[100][100];
 	int m, n, d;
 	Nhap(b, m, n);
 	Xuat(b, m, n);
@@ -18,7 +18,7 @@ int main()
 	return 0;
 }
 
-void Nhap(int a[][200], int& m, int& n)
+void Nhap(int a[][100], int& m, int& n)
 {
 	cout << "Nhap so hang: ";
 	cin >> m;
@@ -26,10 +26,13 @@ void Nhap(int a[][200], int& m, int& n)
 	cin >> n;
 	for (int i = 0; i < m; i++)
 		for (int j = 0; j < n; j++)
+		{
+			cout << "a[" << i << "][" << j << "]: ";
 			cin >> a[i][j];
+		}
 }
 
-void Xuat(int a[][200], int m, int n)
+void Xuat(int a[][100], int m, int n)
 {
 	cout << "Ma tran vua nhap: " << endl;
 	for (int i = 0; i < m; i++)
@@ -50,7 +53,7 @@ bool KTChinhPhuong(int n)
 	return false;
 }
 
-int TongCot(int a[][200], int m, int n, int d)
+int TongCot(int a[][100], int m, int n, int d)
 {
 	int s = 0;
 	for (int i = 0; i < m; i++)

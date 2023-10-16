@@ -26,6 +26,7 @@ void Nhap(int a[][200], int& m, int& n)
 	{
 		for (int j = 0; j < n; j++)
 		{
+			cout << "a[" << i << "][" << j << "]: ";
 			cin >> a[i][j];
 		}
 	}
@@ -45,12 +46,24 @@ void Xuat(int a[][200], int m, int n)
 void LietKeBien(int a[][200], int m, int n)
 {
 	cout << "Cac phan tu o bien: " << endl;
-	for (int i = 0; i < m; i = i + m - 1)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < n; j++)
+		if (i == 0 || i == m - 1)
 		{
-			cout << setw(8) << a[i][j];
+			for (int j = 0; j < n; j++)
+			{
+				cout << setw(8) << a[i][j];
+			}
 		}
-		cout << endl;
+		else
+		{
+			for (int j = 0; j < n; j++)
+			{
+				if (j == 0 || j == n - 1)
+				{
+					cout <<setw(8)<< a[i][j];
+				}
+			}
+		}
 	}
 }

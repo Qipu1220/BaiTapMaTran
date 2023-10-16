@@ -28,6 +28,7 @@ void Nhap(int a[][200], int& m, int& n)
 	{
 		for (int j = 0; j < n; j++)
 		{
+			cout << "a[" << i << "][" << j << "]: ";
 			cin >> a[i][j];
 		}
 	}

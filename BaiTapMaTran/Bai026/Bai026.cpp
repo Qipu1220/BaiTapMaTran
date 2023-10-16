@@ -24,7 +24,10 @@ void Nhap(int a[][200], int& m, int& n)
 	cin >> n;
 	for (int i = 0; i < m; i++)
 		for (int j = 0; j < n; j++)
+		{
+			cout << "a[" << i << "][" << j << "]: ";
 			cin >> a[i][j];
+		}
 }
 
 void Xuat(int a[][200], int m, int n)
