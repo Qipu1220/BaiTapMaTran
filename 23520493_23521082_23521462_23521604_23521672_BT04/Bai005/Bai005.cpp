@@ -1,8 +1,8 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
-void nhap(long a[][500], int& n, int& m);
-void xuat(long a[][500], int n, int m);
+void nhap(long a[][500], int& m, int& n);
+void xuat(long a[][500], int m, int n);
 
 int main()
 {
@@ -13,15 +13,15 @@ int main()
 	return 0;
 }
 
-void nhap(long a[][500], int& n, int& m)
+void nhap(long a[][500], int& m, int& n)
 {
-	cout << "nhap n:";
-	cin >> n;
 	cout << "nhap m:";
 	cin >> m;
-	for (int i = 0; i < n; i++)
+	cout << "nhap n:";
+	cin >> n;
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 		{
 			cout << "a[" << i << "][" << j << "]= ";
 			cin >> a[i][j];
@@ -29,11 +29,11 @@ void nhap(long a[][500], int& n, int& m)
 	}
 }
 
-void xuat(long a[][500], int n, int m)
+void xuat(long a[][500], int m, int n)
 {
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 			cout << setw(8) << a[i][j];
 		cout << endl;
 	}

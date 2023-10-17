@@ -4,42 +4,42 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-void nhap(int a[][500], int& n, int& m);
-void xuat(int a[][500], int n, int m);
+void nhap(int a[][500], int& m, int& n);
+void xuat(int a[][500], int m, int n);
 bool ktChinhPhuong(int x);
-int ChinhPhuongDau(int a[][500],int n,int m);
-int ChinhPhuongLonNhat(int a[][500], int n, int m);
+int ChinhPhuongDau(int a[][500],int m,int n);
+int ChinhPhuongLonNhat(int a[][500], int m, int n);
 
 int main()
 {
 	int a[500][500];
 	int k, l;
 	nhap(a, k, l);
-	cout << "Mang ban dau: \n";
+	cout << "Mang ban dau: \m";
 	xuat(a, k, l);
 	cout << "\nSo chinh phuong lon nhat la: " << ChinhPhuongLonNhat(a, k, l);
 	return 0;
 }
 
-void nhap(int a[][500], int& n, int& m)
+void nhap(int a[][500], int& m, int& n)
 {
-	cout << "nhap m:";
-	cin >> m;
 	cout << "nhap n:";
 	cin >> n;
+	cout << "nhap m:";
+	cin >> m;
 	srand(time(NULL));
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 			a[i][j] = rand() % (200 + 1) - 100;
 	}
 }
 
-void xuat(int a[][500], int n, int m)
+void xuat(int a[][500], int m, int n)
 {
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 			cout << setw(8) << a[i][j];
 		cout << endl;
 	}
@@ -56,11 +56,11 @@ bool ktChinhPhuong(int x)
 	return flag;
 }
 
-int ChinhPhuongDau(int a[][500], int n, int m)
+int ChinhPhuongDau(int a[][500], int m, int n)
 {
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 		{
 			if (ktChinhPhuong(a[i][j])==true)
 				return a[i][j];
@@ -69,17 +69,17 @@ int ChinhPhuongDau(int a[][500], int n, int m)
 	return 0;
 }
 
-int ChinhPhuongLonNhat(int a[][500], int n, int m)
+int ChinhPhuongLonNhat(int a[][500], int m, int n)
 {
-	if (ChinhPhuongDau(a, n, m) == 0)
+	if (ChinhPhuongDau(a, m, n) == 0)
 	{
 		cout << "Khong co so chinh phuong.";
 		return 0;
 	}
-	int ln = ChinhPhuongDau(a, n, m);
-	for (int i = 0; i < n; i++)
+	int ln = ChinhPhuongDau(a, m, n);
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 		{
 			if (a[i][j] > ln)
 				ln = a[i][j];

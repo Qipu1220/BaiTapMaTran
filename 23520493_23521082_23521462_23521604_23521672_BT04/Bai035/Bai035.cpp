@@ -3,17 +3,17 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-void nhap(int a[][500], int& n, int& m);
-void xuat(int a[][500], int n, int m);
+void nhap(int a[][500], int& m, int& n);
+void xuat(int a[][500], int m, int n);
 bool ktSodx(int x);
-int TongDong(int a[][500], int n, int m,int x);
+int TongDong(int a[][500], int m, int n,int x);
 
 int main()
 {
 	int a[500][500];
 	int k, l;
 	nhap(a, k, l);
-	cout << "Mang ban dau: \n";
+	cout << "Mang ban dau: \m";
 	xuat(a, k, l);
 	int d;
 	cout << "Nhap dong: ";
@@ -22,25 +22,25 @@ int main()
 	return 0;
 }
 
-void nhap(int a[][500], int& n, int& m)
+void nhap(int a[][500], int& m, int& n)
 {
-	cout << "nhap m:";
-	cin >> m;
 	cout << "nhap n:";
 	cin >> n;
+	cout << "nhap m:";
+	cin >> m;
 	srand(time(NULL));
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 			a[i][j] = rand() % (200 + 1) - 100;
 	}
 }
 
-void xuat(int a[][500], int n, int m)
+void xuat(int a[][500], int m, int n)
 {
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 			cout << setw(8) << a[i][j];
 		cout << endl;
 	}
@@ -60,16 +60,16 @@ bool ktSodx(int x)
 	return false;
 }
 
-int TongDong(int a[][500], int n, int m,int x)
+int TongDong(int a[][500], int m, int n,int x)
 {
-	if (x > n)
+	if (x > m)
 	{
 		cout << "Hang bi loi";
 		return 0;
 	}
 	int s = 0;
 
-	for (int j = 0; j < m; j++)
+	for (int j = 0; j < n; j++)
 	{
 		if (ktSodx(a[x][j]))
 			s = s+ a[x][j];

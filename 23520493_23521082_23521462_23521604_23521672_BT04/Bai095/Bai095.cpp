@@ -16,32 +16,32 @@ int main()
 	int a[500][500];
 	int k, l;
 	nhap(a, k, l);
-	cout << "Mang ban dau: \n";
+	cout << "Mang ban dau: \m";
 	xuat(a, k, l);
 	cout << "\nLiet ke cac cot nhieu chu so nhat: ";
 	LietKe(a, k, l);
 	return 0;
 }
 
-void nhap(int a[][500], int& n, int& m)
+void nhap(int a[][500], int& m, int& n)
 {
-	cout << "nhap m:";
-	cin >> m;
 	cout << "nhap n:";
 	cin >> n;
+	cout << "nhap m:";
+	cin >> m;
 	srand(time(NULL));
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 			a[i][j] = rand() % (200 + 1) - 100;
 	}
 }
 
-void xuat(int a[][500], int n, int m)
+void xuat(int a[][500], int m, int n)
 {
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 	{
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 			cout << setw(8) << a[i][j];
 		cout << endl;
 	}
@@ -59,32 +59,32 @@ int DemChuSo(int x)
 	return dem;
 }
 
-int DemCot(int a[][500], int n, int m, int x)
+int DemCot(int a[][500], int m, int n, int x)
 {
 	int s = 0;
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < m; i++)
 		s = s + DemChuSo(a[i][x]);
 	return s;
 }
 
-int DemLonNhat(int a[][500], int n, int m)
+int DemLonNhat(int a[][500], int m, int n)
 {
-	int ln = DemCot(a, n, m, 0);
-	for (int j = 0; j < m; j++)
+	int ln = DemCot(a, m, n, 0);
+	for (int j = 0; j < n; j++)
 	{
-		if (DemCot(a, n, m, j) > ln)
-			ln = DemCot(a, n, m, j);
+		if (DemCot(a, m, n, j) > ln)
+			ln = DemCot(a, m, n, j);
 	}
 	return ln;
 }
 
-void LietKe(int a[][500], int n, int m)
+void LietKe(int a[][500], int m, int n)
 {
 
-	int ln = DemLonNhat(a, n, m);
-	for (int j = 0; j < m; j++)
+	int ln = DemLonNhat(a, m, n);
+	for (int j = 0; j < n; j++)
 	{
-		if (DemCot(a, n, m, j) == ln)
+		if (DemCot(a, m, n, j) == ln)
 			cout << j << ", ";
 	}
 }
