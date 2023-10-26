@@ -14,7 +14,7 @@ int main()
 	float a[500][500];
 	int k, l;
 	nhap(a, k, l);
-	cout << "Mang ban dau: \m";
+	cout << "Mang ban dau: \n";
 	xuat(a, k, l);
 	LietKe(a, k, l);
 	return 0;
@@ -42,7 +42,6 @@ void xuat(float a[][500], int m, int n)
 			cout << setw(8) << fixed << setprecision(2) << a[i][j];
 		cout << endl;
 	}
-	cout << "\m";
 }
 
 float TongDong(float a[][500], int m, int n,int x)
