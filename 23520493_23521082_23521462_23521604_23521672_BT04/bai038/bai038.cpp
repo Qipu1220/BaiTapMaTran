@@ -57,7 +57,7 @@ bool ktDang5m(int k)
 	bool flag = true;
 	while (k > 1)
 	{
-		k%= 5;
+		k %= 5;
 		if (k != 0)
 			flag = false;
 		k /= 10;
