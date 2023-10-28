@@ -1,0 +1,3 @@
+﻿  Bai149.cpp
+D:\Visual\UIT_23521462_BT04\Bai149\Bai149.cpp(34,10): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Bai149.vcxproj -> D:\Visual\UIT_23521462_BT04\x64\Debug\Bai149.exe
