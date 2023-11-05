@@ -73,13 +73,14 @@ void XoaCot(float a[][50], int m, int& n, int c)
 
 void XoaCot(float a[][50], int m, int& n)
 {
-	for (int j = 0; j < m ;j++)
+	for (int j = 0; j < m; j++)
 	{
 		if (ktCot(a, m, n, j) == 1)
 		{
 			XoaCot(a, m, n, j);
 			j--;
+			if (j == n-1)
+				break;
 		}
-
 	}
 }
