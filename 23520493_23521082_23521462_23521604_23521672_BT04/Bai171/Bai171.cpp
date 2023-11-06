@@ -64,13 +64,13 @@ int ktCon(float a[][50], int m, int n, int vtd, int vtc, int k, int l)
 
 void TimConLonNhat(float a[][50], int m, int n, int& vtd, int& vtc, int& k, int& l)
 {
-	for ( k = m; k >= 1; k--)
+	for (k = m; k >= 1; k--)
 	{
-		for ( l = n; l >= 1; l--)
+		for (l = n; l >= 1; l--)
 		{
-			for ( vtd = 0; vtd <= m - k; vtd++)
+			for (vtd = 0; vtd <= m - k; vtd++)
 			{
-				for ( vtc = 0; vtc <= n - l; vtc++)
+				for (vtc = 0; vtc <= n - l; vtc++)
 				{
 					if (ktCon(a, m, n, vtd, vtc, k, l) == 1)
 					{
@@ -83,22 +83,27 @@ void TimConLonNhat(float a[][50], int m, int n, int& vtd, int& vtc, int& k, int&
 							cout << endl;
 						}
 						cout << endl;
-						if (ktCon(a, m, n, vtd, vtc, l, k) == 1)
+						for (vtd = 0; vtd <= m - k; vtd++)
 						{
-							for (int i = 0; i < k; i++)
+							for (vtc = 0; vtc <= n - l; vtc++)
 							{
-								for (int j = 0; j < l; j++)
+								if (ktCon(a, m, n, vtd, vtc, l, k) == 1)
 								{
-									cout << setw(8) << a[vtd + i][vtc + j];
+									for (int i = 0; i < l; i++)
+									{
+										for (int j = 0; j < k; j++)
+										{
+											cout << setw(8) << a[vtd + i][vtc + j];
+										}
+										cout << endl;
+									}
 								}
-								cout << endl;
+								return;
 							}
 						}
-						return;
 					}
 				}
 			}
 		}
-	} 
-
+	}
 }
